@@ -20,23 +20,22 @@ namespace selenium_nunit_spec.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("SpecFlowFeature1")]
-    public partial class SpecFlowFeature1Feature
+    [NUnit.Framework.DescriptionAttribute("SpecFlowFeature2")]
+    public partial class SpecFlowFeature2Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "SpecFlowFeature1.feature"
+#line 1 "SpecFlowFeature2.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "features", "SpecFlowFeature1", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "features", "SpecFlowFeature2", "\ttravel scenario", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,15 +74,15 @@ namespace selenium_nunit_spec.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("travel scenario - bali")]
+        [NUnit.Framework.DescriptionAttribute("travel scenario - usa")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        public virtual void TravelScenario_Bali()
+        public virtual void TravelScenario_Usa()
         {
             string[] tagsOfScenario = new string[] {
                     "Test"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("travel scenario - bali", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 9
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("travel scenario - usa", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 7
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -103,25 +102,25 @@ namespace selenium_nunit_spec.Features
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "destinations",
-                            "bali"});
-                table1.AddRow(new string[] {
+                            "usa"});
+                table3.AddRow(new string[] {
                             "departureDate",
                             "30 august 2022"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "returnDate",
                             "30 august 2022"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "ages",
                             "30"});
-#line 10
- testRunner.Given("I entered the following data into the new travel form:", ((string)(null)), table1, "Given ");
+#line 8
+ testRunner.Given("I entered the following data into the new travel form:", ((string)(null)), table3, "Given ");
 #line hidden
-#line 16
+#line 14
  testRunner.Then("plan page should show correct details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -129,15 +128,15 @@ namespace selenium_nunit_spec.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("travel scenario - India")]
+        [NUnit.Framework.DescriptionAttribute("travel scenario - uk")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        public virtual void TravelScenario_India()
+        public virtual void TravelScenario_Uk()
         {
             string[] tagsOfScenario = new string[] {
                     "Test"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("travel scenario - India", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 19
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("travel scenario - uk", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 17
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -157,26 +156,29 @@ namespace selenium_nunit_spec.Features
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "destinations",
-                            "india"});
-                table2.AddRow(new string[] {
+                            "uk"});
+                table4.AddRow(new string[] {
                             "departureDate",
                             "30 august 2022"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "returnDate",
                             "30 august 2022"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "ages",
                             "30"});
-#line 20
- testRunner.Given("I entered the following data into the new travel form:", ((string)(null)), table2, "Given ");
+#line 18
+ testRunner.Given("I entered the following data into the new travel form:", ((string)(null)), table4, "Given ");
 #line hidden
-#line 26
+#line 24
  testRunner.Then("plan page should show correct details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 25
+ testRunner.And("error should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -11,6 +11,7 @@ namespace selenium_nunit_spec
     {
 
         protected ScenarioContext _context;
+
         protected IWebDriver driver;
         public CommonSteps(ScenarioContext context) {
             _context = context;

@@ -11,7 +11,7 @@ namespace selenium_nunit_spec
     [Binding]
     public class SpecFlowFeature1Steps : CommonSteps
     {
-        
+
         public SpecFlowFeature1Steps(ScenarioContext context) : base(context)
         {
             // base(context);
@@ -20,8 +20,15 @@ namespace selenium_nunit_spec
         [Given(@"I have entered (.*) into the calculator")]
         public void GivenIHaveEnteredIntoTheCalculator(int p0)
         {
-           // ScenarioCont.Current.Pending();
+            // ScenarioCont.Current.Pending();
         }
+
+        [Then(@"error should be displayed")]
+        public void ThenErrorShouldBeDisplayed()
+        {
+            Assert.IsTrue(1 == 2);
+        }
+
 
         [Given(@"I entered the following data into the new account form:")]
         public void GivenIEnteredTheFollowingDataIntoTheNewAccountForm(Table table)
