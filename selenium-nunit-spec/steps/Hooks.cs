@@ -2,6 +2,7 @@
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using TechTalk.SpecFlow;
@@ -49,7 +50,10 @@ namespace selenium_nunit_spec.steps
             }
             else if (_context.TestError != null)
             {
-                
+                Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
+                ss.SaveAsFile("s1.png");
+                scenario.AddScreenCaptureFromPath("s1.png");
+
                 if (stepType == "Given")
                     scenario.CreateNode<Given>(_context.StepContext.StepInfo.Text).Fail(_context.TestError.InnerException);
                 else if (stepType == "When")
@@ -93,12 +97,19 @@ namespace selenium_nunit_spec.steps
             // _context["driver"] = new ChromeDriver();
 
             driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://www.1cover.com.au/");
             //   _context[""]
         }
 
         [AfterScenario]
         public void runAfterScenario()
         {
+            scenario.Log(Status.Pass, "Scenario passed");
+          
+
+            //scenario.Log(Status.Pass, ss.AsBase64EncodedString);
+            //scenario.AddScreenCaptureFromBase64String(ss.AsBase64EncodedString);
+
             TestContext.Progress.WriteLine("Run after scenario");
             driver.Quit();
         }
