@@ -4,11 +4,6 @@ using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 namespace selenium_nunit_spec.steps
@@ -30,6 +25,7 @@ namespace selenium_nunit_spec.steps
             //Initialize Extent report before test starts
             var htmlReporter = new ExtentHtmlReporter(@"");
             htmlReporter.Config.ReportName = "Demo report";
+            //htmlReporter.Config.
             //htmlReporter.Configuration().Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             //Attach report to reporter
             extent = new ExtentReports();
@@ -53,6 +49,7 @@ namespace selenium_nunit_spec.steps
             }
             else if (_context.TestError != null)
             {
+                
                 if (stepType == "Given")
                     scenario.CreateNode<Given>(_context.StepContext.StepInfo.Text).Fail(_context.TestError.InnerException);
                 else if (stepType == "When")
@@ -61,6 +58,7 @@ namespace selenium_nunit_spec.steps
                     scenario.CreateNode<Then>(_context.StepContext.StepInfo.Text).Fail(_context.TestError.Message);
             }
 
+            
         
             
         }
