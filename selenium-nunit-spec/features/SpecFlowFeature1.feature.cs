@@ -176,7 +176,7 @@ namespace selenium_nunit_spec.Features
  testRunner.Given("I entered the following data into the new travel form:", ((string)(null)), table2, "Given ");
 #line hidden
 #line 26
- testRunner.Then("plan page should show correct details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("plan page should show correct travel details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

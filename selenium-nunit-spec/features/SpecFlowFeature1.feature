@@ -23,7 +23,7 @@
 	| departureDate |  30 august 2022     |
 	| returnDate    |  30 august 2022     |
     | ages          |  30                 |
-	Then plan page should show correct details
+	Then plan page should show correct travel details
 
 
 	

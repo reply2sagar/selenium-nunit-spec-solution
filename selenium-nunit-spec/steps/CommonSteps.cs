@@ -1,6 +1,8 @@
-﻿using NUnit.Framework;
+﻿using Microsoft.Extensions.Configuration;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using selenium_nunit_spec.config;
 using System;
 using TechTalk.SpecFlow;
 
@@ -10,11 +12,14 @@ namespace selenium_nunit_spec
     public class CommonSteps
     {
 
-        protected ScenarioContext _context;
-
+        protected ScenarioContext context;
         protected IWebDriver driver;
+        protected IConfigurationRoot configManager;
         public CommonSteps(ScenarioContext context) {
-            _context = context;
+            configManager = ConfigManager.GetConfig();
+            this.context = context;
+            if (context.ContainsKey("driver"))
+            driver = ((IWebDriver)context["driver"]) ;
         }
 
         

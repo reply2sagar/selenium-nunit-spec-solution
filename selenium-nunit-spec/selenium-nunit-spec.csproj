@@ -27,13 +27,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="config\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="features\SpecFlowFeature2.feature.cs">
       <DependentUpon>SpecFlowFeature2.feature</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -42,5 +47,13 @@
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="reports\" />
+  </ItemGroup>
+
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+    <Copy SourceFiles="App.config" DestinationFiles="$(OutDir)\testhost.dll.config" />
+  </Target>
 
 </Project>

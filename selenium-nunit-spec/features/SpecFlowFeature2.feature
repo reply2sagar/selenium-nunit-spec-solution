@@ -21,6 +21,7 @@
 	| departureDate |  30 august 2022     |
 	| returnDate    |  30 august 2022     |
     | ages          |  30                 |
+	And I call this
 	Then plan page should show correct details
 	And error should be displayed
 

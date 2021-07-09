@@ -13,14 +13,15 @@ namespace selenium_nunit_spec.steps
 
         public SpecFlowFeature2Steps(ScenarioContext context) : base(context)
         {
-            // base(context);
+            
         }
-     
+
 
         [Then(@"plan page should show correct details")]
         public void ThenPlanPageShouldShowCorrectDetails()
         {
-            var city = ((TravelData)_context["traveldata"]).destinations[0];
+            //_context["traveldata"] = travelData;
+            var city = ((TravelData)context["traveldata"]).destinations[0];
             
             
             System.Console.WriteLine($"destination should be {city}" );
@@ -32,5 +33,12 @@ namespace selenium_nunit_spec.steps
 
             //var text = driver.FindElement(By.XPath("//")).Text;
         }
+
+        [Then(@"plan page should show correct travel details")]
+        public void ThenPlanPageShouldShowCorrectTravelDetails()
+        {
+            int a = 2;
+        }
+
     }
 }

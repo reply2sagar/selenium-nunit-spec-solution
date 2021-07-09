@@ -1,20 +1,25 @@
-﻿using NUnit.Framework;
+﻿using Microsoft.Extensions.Configuration;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using selenium_nunit_spec.models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
+
+//extent report
+//working code
+
 
 namespace selenium_nunit_spec
 {
     [Binding]
     public class SpecFlowFeature1Steps : CommonSteps
     {
-
         public SpecFlowFeature1Steps(ScenarioContext context) : base(context)
         {
-            // base(context);
+            
         }
 
         [Given(@"I have entered (.*) into the calculator")]
@@ -26,7 +31,7 @@ namespace selenium_nunit_spec
         [Then(@"error should be displayed")]
         public void ThenErrorShouldBeDisplayed()
         {
-            Assert.IsTrue(1 == 2);
+            //Assert.IsTrue(1 == 2);
         }
 
 
@@ -40,14 +45,26 @@ namespace selenium_nunit_spec
         [Given(@"I entered the following data into the new travel form:")]
         public void GivenIEnteredTheFollowingDataIntoTheNewTravelForm(Table table)
         {
+            //using System.Configuration
+            //var appSettings = ConfigurationManager.AppSettings;
+
+
+
+            
+
+            driver.Navigate().GoToUrl("https://www.1cover.com.au/");
+
+            //config["SMTP:host"]
+            var connectionString = configManager["ConnectionString"];
+
             //  var travelData = table.CreateInstance<TravelData>();
             //  int a = 1;
             //
 
             //driver.findelement
-            
+
             var travelData = TravelData.getSample();
-            _context["traveldata"] = travelData;
+            context["traveldata"] = travelData;
             //travelData.returnDate = new DateTime().AddDays(-2);
             // travelData.destinations = new List<String> { "australia","india" };
 
@@ -69,6 +86,12 @@ namespace selenium_nunit_spec
 
         }
 
+        [Given(@"I call this")]
+        public void GivenICallThis()
+        {
+            int b = 0;
+           // ScenarioContext.Current.Pending();
+        }
 
 
         [When(@"I press add")]
