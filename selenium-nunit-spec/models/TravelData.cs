@@ -13,6 +13,7 @@ namespace selenium_nunit_spec.models
         public DateTime departureDate;
         public DateTime returnDate;
         public List<int> ages;
+        public String name;
 
 
         public static TravelData getSample()

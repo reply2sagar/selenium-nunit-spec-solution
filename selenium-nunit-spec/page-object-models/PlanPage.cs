@@ -7,11 +7,16 @@ using System.Threading.Tasks;
 
 namespace selenium_nunit_spec.page_object_models
 {
-    public class PlanPage
+    public class PlanPage : BasePage
     {
        
-        public PlanPage(IWebDriver driver)
+        public PlanPage(IWebDriver driver) : base(driver)
         { 
+        }
+
+        public String getCountry()
+        {
+            return driver.Url;
         }
 
         public String GetDestination()

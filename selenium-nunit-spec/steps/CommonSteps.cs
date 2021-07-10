@@ -18,6 +18,7 @@ namespace selenium_nunit_spec
         public CommonSteps(ScenarioContext context) {
             configManager = ConfigManager.GetConfig();
             this.context = context;
+
             if (context.ContainsKey("driver"))
             driver = ((IWebDriver)context["driver"]) ;
         }

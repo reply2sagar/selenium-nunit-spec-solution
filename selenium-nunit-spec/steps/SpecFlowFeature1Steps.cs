@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using selenium_nunit_spec.models;
+using selenium_nunit_spec.page_object_models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -48,9 +49,10 @@ namespace selenium_nunit_spec
             //using System.Configuration
             //var appSettings = ConfigurationManager.AppSettings;
 
-
-
             
+
+            var planPage = new PlanPage(driver);
+            //planPage.
 
             driver.Navigate().GoToUrl("https://www.1cover.com.au/");
 
@@ -64,6 +66,8 @@ namespace selenium_nunit_spec
             //driver.findelement
 
             var travelData = TravelData.getSample();
+            //travelData.name = table.Rows[0].GetString("value");
+            
             context["traveldata"] = travelData;
             //travelData.returnDate = new DateTime().AddDays(-2);
             // travelData.destinations = new List<String> { "australia","india" };
